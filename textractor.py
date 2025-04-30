@@ -1,3 +1,5 @@
+### Testing with PyMuPDF + Fitz (2025-04-20 )
+
 import os
 from pathlib import Path
 import fitz  # PyMuPDF
@@ -11,7 +13,7 @@ if not folder.exists() or not folder.is_dir():
     exit(1)
 
 # Create output directory
-output_dir = folder / "textracted"
+output_dir = folder / "textracted/"
 os.makedirs(output_dir, exist_ok=True)
 
 # List all PDF files in the folder
