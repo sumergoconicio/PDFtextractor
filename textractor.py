@@ -69,10 +69,13 @@ def process_pdfs_in_folder(folder: Path, output_dir: Path) -> None:
         print("No PDF files found in the specified directory.")
         return
     for pdf_file in pdf_files:
+        md_filename = pdf_file.stem + ".md"
+        md_path = output_dir / md_filename
+        if md_path.exists():
+            print(f"Skipping '{pdf_file.name}' as markdown already exists.")
+            continue
         try:
             text = extract_text_from_pdf(pdf_file)
-            md_filename = pdf_file.stem + ".md"
-            md_path = output_dir / md_filename
             save_text_to_markdown(text, md_path)
             print(f"Extracted text from '{pdf_file.name}' to '{md_path.relative_to(folder)}'")
         except Exception as e:

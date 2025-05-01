@@ -6,6 +6,7 @@ A simple Python script to batch-extract text from all PDF files in a specified f
 - Extracts text from every PDF in a chosen directory
 - Saves extracted text as `.md` files in a `textracted/` subfolder
 - Handles errors gracefully and provides clear messages
+- Skips PDFs if corresponding markdown already exists to avoid reprocessing
 
 ## Requirements
 - Python 3.7+
@@ -28,6 +29,7 @@ A simple Python script to batch-extract text from all PDF files in a specified f
    - Check the folder exists and contains PDF files
    - Extract text from each PDF
    - Save each PDF's text as a Markdown file in a `textracted/` subfolder next to your PDFs
+   - Skip PDFs whose `.md` output already exists
 
 ## Output
 - For each PDF, a corresponding `.md` file will be created in `textracted/`.
