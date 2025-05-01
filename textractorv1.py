@@ -1,5 +1,5 @@
 ########### PYTHON
-# Script Title: PDF Folder Textractor
+# Script Title: PDFTextractor v1
 # Script Description: Extracts text from all PDF files in a user-specified folder and saves each as a corresponding markdown file in a subdirectory. Modularized for clarity and extensibility, with robust documentation.
 # Script Author: myPyAI + Naveen Srivatsav
 # Last Updated: 20250430

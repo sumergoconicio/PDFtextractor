@@ -36,12 +36,18 @@ A simple Python script to batch-extract text from all PDF files in a specified f
 - Example: `document.pdf` → `textracted/document.md`
 
 ## Example
-```
+```bash
 $ python textractor.py
 Enter the path to the folder containing PDFs: /path/to/my/pdfs
 Extracted text from 'file1.pdf' to 'textracted/file1.md'
 Extracted text from 'file2.pdf' to 'textracted/file2.md'
 ```
+
+## Versions
+- **v1 (`textractor.py`)**: Simple version that processes a single folder, extracting PDFs directly within and saving markdowns into a `textracted/` subfolder.
+- **v2 (`textractorv2.py`)**: Advanced version that watches a root folder recursively, processes PDFs at any depth, skips files with existing `.md`, and outputs each into its first-level subfolder's `textracted/`.
+
+Recommended: for most use cases, start with **v1** and extend it as needed.
 
 ## Troubleshooting
 - Ensure you have permission to read the PDF files and write to the output directory.
